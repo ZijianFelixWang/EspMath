@@ -1,0 +1,234 @@
+# EspMath
+
+matches:
+  # Simple text replacement
+  - trigger: ":def"
+    replace: ">[!abstract] Definition"
+  - trigger: ":rem"
+    replace: ">[!note] Remark"
+  - trigger: ":tex"
+    replace: ">[!tip] LaTeX"
+  - trigger: ":cau"
+    replace: ">[!caution] Caution"
+  - trigger: ":cor"
+    replace: ">[!note] Corollary"
+  - trigger: ":lem"
+    replace: ">[!note] Lemma"
+  - trigger: ":thm"
+    replace: ">[!note] Theorem"
+  - trigger: ":eg"
+    replace: ">[!example] Example"
+  - trigger: ":prop"
+    replace: ">[!note] Proposition"
+  - trigger: ":conj"
+    replace: ">[!question] Conjecture"
+  - trigger: ":qsn"
+    replace: ">[!question] Question"
+  - trigger: ":law"
+    replace: ">[!note] Law"
+  - trigger: ":disam"
+    replace: ">[!tip] Disambiguation"
+  - trigger: ":ax"
+    replace: ">[!abstract] Axiom"
+  - trigger: ":qed"
+    replace: "$\\blacksquare$"
+  - trigger: ":lcm"
+    replace: "\\text{lcm}"
+  - trigger: ":ob"
+    replace: "\\text{Ob}"
+  - trigger: ":mor"
+    replace: "\\text{Mor}"
+  - trigger: ":hom"
+    replace: "\\text{Hom}"
+  - trigger: ":iso"
+    replace: "\\text{Isom}"
+  - trigger: ":end"
+    replace: "\\text{End}"
+  - trigger: ":aut"
+    replace: "\\text{Aut}"
+  - trigger: ":inn"
+    replace: "\\text{Inn}"
+  - trigger: ":disc"
+    replace: "\\text{Disc}"
+  - trigger: ":ord"
+    replace: "\\text{Ord}"
+  - trigger: ":cal"
+    replace: "\\mathcal"
+  - trigger: ":fct"
+    replace: "\\text{Fct}($|$)"
+  - trigger: ":sf"
+    replace: "\\mathsf"
+  - trigger: ":id"
+    replace: "\\text{id}"
+  - trigger: ":so"
+    replace: "\\Longrightarrow"
+  - trigger: ":to"
+    replace: "\\longrightarrow"
+  - trigger: ":ot"
+    replace: "\\longleftarrow"
+  - trigger: ":-1"
+    replace: "^{-1}"
+  - trigger: ":gln"
+    replace: "\\text{GL}_n(\\mathbb R)"
+  - trigger: ":sln"
+    replace: "\\text{SL}_n(\\mathbb R)"
+  - trigger: ":sgn"
+    replace: "\\text{sgn}"
+  - trigger: ":op"
+    replace: "^{\\text{op}}"
+  - trigger: ":---"
+    replace: "\\textemdash"
+  - trigger: ":dsn"
+    replace: "\\mathbb N"
+  - trigger: ":dsr"
+    replace: "\\mathbb R"
+  - trigger: ":dsq"
+    replace: "\\mathbb Q"
+  - trigger: ":dsh"
+    replace: "\\mathbb H"
+  - trigger: ":dsc"
+    replace: "\\mathbb C"
+  - trigger: ":dsa"
+    replace: "\\mathbb A"
+  - trigger: ":dsz"
+    replace: "\\mathbb Z"
+  - trigger: ":dsl"
+    replace: "\\mathbb L"
+  - trigger: ":dsp"
+    replace: "\\mathbb P"
+  - trigger: ":align"
+    replace: "\\begin{align}$|$\\end{align}"
+  - trigger: ":cases"
+    replace: "\\begin{cases}$|$\\end{cases}"
+  - trigger: ":ec2"
+    replace: "$\\varepsilon-$close to"
+  - trigger: ":dc2"
+    replace: "$\\delta-$close to"
+  - trigger: ":edc2"
+    replace: "$(\\varepsilon+\\delta)-$close to"
+  - trigger: ":ve"
+    replace: "\\varepsilon"
+  - trigger: ":simto"
+    replace: "\\stackrel{\\sim}{\\longrightarrow}"
+  - trigger: ":flim"
+    replace: "\\text{LIM}_{n\\rightarrow\\infty}"
+  - trigger: ":lim"
+    replace: "\\lim_{n\\rightarrow\\infty}"
+  - trigger: ":vv"
+    replace: "\\left(\\begin{array}{c}$|$\\end{array}\\right)"
+  - trigger: ":diag"
+    replace: "\\text{diag}"
+  - trigger: ":."
+    replace: "_{$|$}"
+  - trigger: ":dim"
+    replace: "\\text{dim}"
+  - trigger: ":rank"
+    replace: "\\text{rank}"
+  - trigger: ":ev"
+    replace: "\\text{ev}"
+  - trigger: ":longleftmapsto"
+    replace: "\\longleftarrow{\\raise{.4pt}{\\hspace{-5pt}\\shortmid}}"
+  - trigger: ":bf"
+    replace: "\\mathbf"
+  - trigger: ":pd"
+    replace: "\\partial"
+  - trigger: ":qq"
+    replace: "\\theta"
+  - trigger: ":dd"
+    replace: "\\text{d}"
+  - trigger: ":cst"
+    replace: "\\text{const}"
+  - trigger: ":ch"
+    replace: "\\choose"
+  - trigger: "::"
+    replace: "\\cdots"
+  - trigger: ":abs"
+    replace: "\\left\\vert$|$\\right\\vert"
+  - trigger: ":()"
+    replace: "\\left($|$\\right)"
+  - trigger: ":eint"
+    replace: "E_{\\text{int}}"
+  - trigger: ":tx"
+    replace: "\\text{$|$}"
+
+  - trigger: ":frac"
+    form: \frac{[[f1]]}{[[f2]]}
+    form_fields:
+      f1:
+        multiline: false
+      f2:
+        multiline: false
+  - trigger: ":xto"
+    form: \stackrel{[[f1]]}{\longrightarrow}
+    form_fields:
+      f1:
+        multiline: false
+  - trigger: ":a22"
+    form: \begin{array}{cc}[[f1]]&[[f2]]\\[[f3]]&[[f4]]\end{array}
+    form_fields:
+      f1:
+        multiline: false
+      f2:
+        multiline: false
+      f3:
+        multiline: false
+      f4:
+        multiline: false
+  - trigger: ":seq"
+    form: ([[name]]_n)_{n=[[start]]}^\infty
+    form_fields:
+      name:
+        multiline: false
+      start:
+        multiline: false
+  - trigger: ":sumt"
+    form: \sum_{i=[[f1]]}^{[[f2]]}[[f3]]_i
+    form_fields:
+      f1:
+        multiline: false
+      f2:
+        multiline: false
+      f3:
+        multiline: false
+  - trigger: ":sumi"
+    form: \sum_{n=[[f1]]}^{\infty}[[f3]]_n
+    form_fields:
+      f1:
+        multiline: false
+      f3:
+        multiline: false
+  - trigger: ":sumj"
+    form: \sum_{[[i]]=[[f1]]}^{[[f2]]}[[f3]]$|$[[i]]
+    form_fields:
+      i:
+        multiline: false
+      f1:
+        multiline: false
+      f2:
+        multiline: false
+      f3:
+        multiline: false
+  - trigger: ":sumx"
+    form: \sum_{[[f1]]}[[f3]]
+    form_fields:
+      f1:
+        multiline: false
+      f3:
+        multiline: false
+  - trigger: ":intt"
+    form: \int_{[[f1]]}^{[[f2]]}
+    form_fields:
+      f1:
+        multiline: false
+      f2:
+        multiline: false
+  - trigger: ":det"
+    form: \left\vert\begin{array}{[[f1]]}$|$\end{array}\right\vert
+    form_fields:
+      f1:
+        multiline: false
+  - trigger: ":mat"
+    form: \left(\begin{array}{[[f1]]}$|$\end{array}\right)
+    form_fields:
+      f1:
+        multiline: false
